@@ -1,0 +1,391 @@
+<template>
+    <div>
+      <v-card>
+        <v-container>
+          <h1>Sommerschule - Gymnasium Bad Leonfelden</h1>
+          <br />
+          <hr />
+          <br />
+          <v-btn><router-link to="/">Zur Kursübersicht</router-link></v-btn>
+          <h2 style="margin: 20px">Wochenplan</h2>
+  
+          <v-table width="500px" :mobile-breakpoint="600" :stacked="xs">
+            <thead>
+              <tr>
+                <th>Montag 8:00-9:45</th>
+                <th>Dienstag 8:00-9:45</th>
+                <th>Mittwoch 8:00-9:45</th>
+                <th>Donnerstag 8:00-9:45</th>
+                <th>Freitag 8:00-9:45</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="i in 4" :key="i">
+                <td v-for="day in daysEarly" :key="day.day">
+                  <div>
+                    <v-btn
+                      flat
+                      width="160"
+                      size="small"
+                      :rounded="0"
+                      :class="getClass(day, i)"
+                      @click="onClick(day, i)"
+                    >
+                      {{ getLesson(getLid(day, i)).lessonname }}
+                    </v-btn>
+                  </div>
+                </td>
+              </tr>
+              <br />
+              <tr>
+                <th>Montag 10:00-11:45</th>
+                <th>Dienstag 10:00-11:45</th>
+                <th>Mittwoch 10:00-11:45</th>
+                <th>Donnerstag 10:00-11:45</th>
+                <th>Freitag 10:00-11:45</th>
+              </tr>
+              <tr v-for="i in 4" :key="i">
+                <td v-for="day in daysLate" :key="day.day">
+                  <div>
+                    <v-btn
+                      flat
+                      width="160"
+                      size="small"
+                      :rounded="0"
+                      :class="getClass(day, i)"
+                      @click="onClick(day, i)"
+                    >
+                      {{ getLesson(getLid(day, i)).lessonname }}
+                    </v-btn>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </v-table>
+          <br />
+          <br />
+          <div
+            class="container"
+            style="display: flex; justify-content: space-between; flex-wrap: wrap"
+          >
+            
+            <v-btn style="margin-top: 10px; margin-botton: 10px; width: 300px"
+              :disabled="isValid()"><router-link :to="`/form/${this.getActiveLessonsJSON()}`">Zum Anmeldeformular (mind. 2 Kurse auswählen)</router-link></v-btn>
+            <p>
+              Das Anmeldeformular bitte über folgenden Link downloaden und
+              unterschrieben an sommerschule@borgleon.at senden.
+            </p>
+            <v-card style="width: 600px">
+              <v-list>
+                <v-list-subheader>gewählte Kurse:</v-list-subheader>
+                <v-list-item
+                  style="text-align: left"
+                  variant="text"
+                  v-for="(lesson, i) in this.getActiveLessons()"
+                  :key="i"
+                >
+                  {{ lesson.lessonname + ":  " + lesson.ltime }}
+                </v-list-item>
+              </v-list>
+            </v-card>
+          </div>
+        </v-container>
+      </v-card>
+    </div>
+  </template>
+    
+  <script>
+  
+  export default {
+    data() {
+      return {
+        daysEarly: [
+          { day: "Montag", lid: [1, 2, 3, 4], time: "8:00 - 9:45" },
+          { day: "Dienstag", lid: [9, 2, 1, 4], time: "8:00 - 9:45" },
+          { day: "Mittwoch", lid: [9, 11, 12, 13], time: "8:00 - 9:45" },
+          { day: "Donnerstag", lid: [11, 18, 16, 20], time: "8:00 - 9:45" },
+          { day: "Freitag", lid: [18, 3, 20, 7], time: "8:00 - 9:45" },
+        ],
+        daysLate: [
+          { day: "Montag", lid: [5, 6, 7, 8], time: "10:00 - 11:45" },
+          { day: "Dienstag", lid: [5, 6, 10, 8], time: "10:00 - 11:45" },
+          { day: "Mittwoch", lid: [14, 15, 16, 17], time: "10:00 - 11:45" },
+          { day: "Donnerstag", lid: [19, 14, 12, 15], time: "10:00 - 11:45" },
+          { day: "Freitag", lid: [19, 13, 10, 17], time: "10:00 - 11:45" },
+        ],
+        lessons: [
+          {
+            lessonid: 1,
+            ldays: [],
+            lessonname: "Chirurgisches Nähen",
+            active: false,
+            btncolor: "green",
+            ltime: [],
+          },
+          {
+            lessonid: 2,
+            ldays: [],
+            lessonname: "Filzen",
+            active: false,
+            btncolor: "red",
+            ltime: [],
+          },
+          {
+            lessonid: 3,
+            ldays: [],
+            lessonname: "bewegtes Leben",
+            active: false,
+            btncolor: "grey",
+            ltime: [],
+          },
+          {
+            lessonid: 4,
+            ldays: [],
+            lessonname: "Chor",
+            active: false,
+            btncolor: "lightblue",
+            ltime: [],
+          },
+          {
+            lessonid: 5,
+            ldays: [],
+            lessonname: "Spanisch",
+            active: false,
+            btncolor: "#e8e289",
+            ltime: [],
+          },
+          {
+            lessonid: 6,
+            ldays: [],
+            lessonname: "Keramik",
+            active: false,
+            btncolor: "#f7d497",
+            ltime: [],
+          },
+          {
+            lessonid: 7,
+            ldays: [],
+            lessonname: "Schach",
+            active: false,
+            btncolor: "#c0c6cf",
+            ltime: [],
+          },
+          {
+            lessonid: 8,
+            ldays: [],
+            lessonname: "Percussion",
+            active: false,
+            btncolor: "#83aef2",
+            ltime: [],
+          },
+          {
+            lessonid: 9,
+            ldays: [],
+            lessonname: "Foto/Cyanotypie",
+            active: false,
+            btncolor: "#eda64e",
+            ltime: [],
+          },
+          {
+            lessonid: 10,
+            ldays: [],
+            lessonname: "Gesang",
+            active: false,
+            btncolor: "#41aee0",
+            ltime: [],
+          },
+          {
+            lessonid: 11,
+            ldays: [],
+            lessonname: "Tontechnik",
+            active: false,
+            btncolor: "#293791",
+            ltime: [],
+          },
+          {
+            lessonid: 12,
+            ldays: [],
+            lessonname: "Italienisch",
+            active: false,
+            btncolor: "#c4b164",
+            ltime: [],
+          },
+          {
+            lessonid: 13,
+            ldays: [],
+            lessonname: "Biologie",
+            active: false,
+            btncolor: "#2bba23",
+            ltime: [],
+          },
+          {
+            lessonid: 14,
+            ldays: [],
+            lessonname: "Philosophie",
+            active: false,
+            btncolor: "#7f8a7f",
+            ltime: [],
+          },
+          {
+            lessonid: 15,
+            ldays: [],
+            lessonname: "Spieleprogrammierung",
+            active: false,
+            btncolor: "#825214",
+            ltime: [],
+          },
+          {
+            lessonid: 16,
+            ldays: [],
+            lessonname: "Französisch",
+            active: false,
+            btncolor: "#f0e0c9",
+            ltime: [],
+          },
+          {
+            lessonid: 17,
+            ldays: [],
+            lessonname: "Weltreise",
+            active: false,
+            btncolor: "#8c8984",
+            ltime: [],
+          },
+          {
+            lessonid: 18,
+            ldays: [],
+            lessonname: "Englisch",
+            active: false,
+            btncolor: "#99691a",
+            ltime: [],
+          },
+          {
+            lessonid: 19,
+            ldays: [],
+            lessonname: "Chemie",
+            active: false,
+            btncolor: "#5fc441",
+            ltime: [],
+          },
+          {
+            lessonid: 20,
+            ldays: [],
+            lessonname: "3D Modelling",
+            active: false,
+            btncolor: "#a1894c",
+            ltime: [],
+          },
+        ],
+        activeLessons: []
+      };
+    },
+    created() {
+      this.fillLdays();
+    },
+    methods: {
+      /*getSubmit(values){
+        this.Anmeldedaten.Name = values.name;
+        this.Anmeldedaten.Telefonnummer = values.phone;
+        this.Anmeldedaten.Emailadresse = values.email;
+        console.log(this.Anmeldedaten)
+      },*/
+      isValid() {
+        return this.activeLessons.length >= 2 ? false : true;
+      },
+      getActiveLessons() {
+        return this.activeLessons;
+      },
+      getActiveLessonsJSON(){
+        return encodeURIComponent(JSON.stringify(this.activeLessons));
+      },
+      fillLdays() {
+        this.daysEarly.forEach((day) => {
+          day.lid.forEach((lid) => {
+            this.getLesson(lid).ldays.push(day);
+            this.getLesson(lid).ltime.push(` ${day.day} - ${day.time}`);
+          });
+        });
+        this.daysLate.forEach((day) => {
+          day.lid.forEach((lid) => {
+            this.getLesson(lid).ldays.push(day);
+            this.getLesson(lid).ltime.push(` ${day.day}-${day.time}`);
+          });
+        });
+      },
+      getClass(day, index) {
+        return {
+          selected: this.getLesson(day.lid[index - 1]).active,
+        };
+      },
+      getLesson(id) {
+        return this.lessons.find((lesson) => lesson.lessonid === id);
+      },
+      getLid(day, index) {
+        return day.lid[index - 1];
+      },
+      onClick(day, index) {
+        //trigger on off
+        if (this.getLesson(day.lid[index - 1]).active) {
+          this.getLesson(day.lid[index - 1]).active = false;
+        } else {
+          this.getLesson(day.lid[index - 1]).active = true;
+          this.setOtherFalse(day, index);
+        }
+        this.activeLessons = this.lessons.filter(
+          (element) => element.active === true
+        );
+      },
+      setOtherFalse(day, index) {
+        //set elements from same block inactive
+        day.lid.forEach((element) => {
+          this.getLesson(element).active = false;
+        });
+  
+        //set elements from chained course inactive
+        this.getLesson(day.lid[index - 1]).ldays.forEach((el) => {
+          el.lid.forEach((e) => {
+            this.getLesson(e).active = false;
+          });
+        });
+        //set clicked active
+        day.lid.forEach((element) => {
+          if (element === this.getLid(day, index)) {
+            //set all day elements inactive except clicked
+            this.getLesson(element).active = true;
+          }
+        });
+      },
+    },
+  };
+  </script>
+    
+  <style scoped>
+  table {
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  
+  th,
+  td {
+    border: 1px solid #ddd;
+    padding: 5px !important;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+    font-size: 0.9em;
+    text-align: center !important;
+  }
+  
+  button {
+    background-color: #f2f2f2;
+    font-size: 0.6em;
+    color: black !important;
+  }
+  
+  .selected {
+    background-color: #ff7300;
+    color: white !important;
+    opacity: 1;
+  }
+  </style>
+  
