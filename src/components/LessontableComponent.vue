@@ -1,11 +1,11 @@
 <template>
     <div>
       <v-container style="max-width: 1200px;">
-          <h1>Sommerschule - Gymnasium Bad Leonfelden</h1>
+          <h1 style="text-align: center;">Sommerschule - Gymnasium Bad Leonfelden</h1>
           <br />
           <hr />
           <br />
-          <v-btn><router-link to="/">Zur Kursübersicht</router-link></v-btn>
+          <v-btn><router-link class="routerlink" to="/">Zur Kursübersicht</router-link></v-btn>
           <h2 style="margin: 20px">Wochenplan</h2>
   
           <v-table width="500px" :mobile-breakpoint="600" :stacked="xs">
@@ -62,14 +62,11 @@
             </tbody>
           </v-table>
           <br />
-          <br />
-          <div
-            class="container"
-            style="display: flex; justify-content: space-between; flex-wrap: wrap"
-          >
-            
-            <v-btn style="margin-top: 10px; margin-botton: 10px; width: 300px"
+            <v-container style="display:flex; justify-content: center;" >
+              <v-btn :class="btnToPDF" style="margin-top: 10px; margin-botton: 10px; width: 400px; font-size: 0.8rem; color:blue"
               :disabled="isValid()"><router-link :to="`/form/${this.getActiveLessonsJSON()}`">Zum Anmeldeformular (mind. 2 Kurse auswählen)</router-link></v-btn>
+            </v-container>
+            <br>
             <p>
               Das Anmeldeformular bitte über folgenden Link downloaden und
               unterschrieben an sommerschule@borgleon.at senden.
@@ -87,7 +84,7 @@
                 </v-list-item>
               </v-list>
             </v-card>
-          </div>
+          
       </v-container>
     </div>
   </template>
