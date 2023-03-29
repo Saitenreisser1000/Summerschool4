@@ -5,6 +5,7 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        max-width: 1200px;
         "
     >
       <v-card width="80%">
@@ -272,7 +273,7 @@
           margin: { top: 110 },
   
           theme: "plain",
-          head: [["Kursname", "Termine", "Kursleiter"]],
+          head: [["Kursname", "Termine", "KursleiterIn"]],
           body: tableData.map((item) => [item.lessonname, item.ltime, item.tutor]),
         });
   

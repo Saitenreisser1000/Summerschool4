@@ -1,7 +1,6 @@
 <template>
     <div>
-      <v-card>
-        <v-container>
+      <v-container style="max-width: 1200px;">
           <h1>Sommerschule - Gymnasium Bad Leonfelden</h1>
           <br />
           <hr />
@@ -89,8 +88,7 @@
               </v-list>
             </v-card>
           </div>
-        </v-container>
-      </v-card>
+      </v-container>
     </div>
   </template>
     
@@ -130,7 +128,7 @@
             active: false,
             btncolor: "red",
             ltime: [],
-            tutor: "Ursula Jahn"
+            tutor: "Katharina Hoffelner"
           },
           {
             lessonid: 3,
@@ -139,7 +137,7 @@
             active: false,
             btncolor: "grey",
             ltime: [],
-            tutor: "Ursula Jahn"
+            tutor: "Stefan Dollhäubl-Lehmann"
           },
           {
             lessonid: 4,
@@ -148,7 +146,7 @@
             active: false,
             btncolor: "lightblue",
             ltime: [],
-            tutor: "Ursula Jahn"
+            tutor: "Stefan Kapeller"
           },
           {
             lessonid: 5,
@@ -157,7 +155,7 @@
             active: false,
             btncolor: "#e8e289",
             ltime: [],
-            tutor: "Ursula Jahn"
+            tutor: "Ivana Glavas"
           },
           {
             lessonid: 6,
@@ -166,7 +164,7 @@
             active: false,
             btncolor: "#f7d497",
             ltime: [],
-            tutor: "Ursula Jahn"
+            tutor: "Katharina Hoffelner"
           },
           {
             lessonid: 7,
@@ -175,7 +173,7 @@
             active: false,
             btncolor: "#c0c6cf",
             ltime: [],
-            tutor: "Ursula Jahn"
+            tutor: "Philipp Türkis"
           },
           {
             lessonid: 8,
@@ -184,7 +182,7 @@
             active: false,
             btncolor: "#83aef2",
             ltime: [],
-            tutor: "Ursula Jahn"
+            tutor: "Stefan Kapeller"
           },
           {
             lessonid: 9,
@@ -193,7 +191,7 @@
             active: false,
             btncolor: "#eda64e",
             ltime: [],
-            tutor: "Ursula Jahn"
+            tutor: "Anna Strasser"
           },
           {
             lessonid: 10,
@@ -202,7 +200,7 @@
             active: false,
             btncolor: "#41aee0",
             ltime: [],
-            tutor: "Ursula Jahn"
+            tutor: "Alexandra Diesterhöft"
           },
           {
             lessonid: 11,
@@ -211,7 +209,7 @@
             active: false,
             btncolor: "#293791",
             ltime: [],
-            tutor: "Ursula Jahn"
+            tutor: "Paul Katzmayr"
           },
           {
             lessonid: 12,
@@ -220,7 +218,7 @@
             active: false,
             btncolor: "#c4b164",
             ltime: [],
-            tutor: "Ursula Jahn"
+            tutor: "Isabella Biebl"
           },
           {
             lessonid: 13,
@@ -238,7 +236,7 @@
             active: false,
             btncolor: "#7f8a7f",
             ltime: [],
-            tutor: "Ursula Jahn"
+            tutor: "Tina Schmid-Ratzenböck"
           },
           {
             lessonid: 15,
@@ -247,7 +245,7 @@
             active: false,
             btncolor: "#825214",
             ltime: [],
-            tutor: "Ursula Jahn"
+            tutor: "Stefan Leutgeb"
           },
           {
             lessonid: 16,
@@ -256,7 +254,7 @@
             active: false,
             btncolor: "#f0e0c9",
             ltime: [],
-            tutor: "Ursula Jahn"
+            tutor: "Isabella Biebl"
           },
           {
             lessonid: 17,
@@ -265,7 +263,7 @@
             active: false,
             btncolor: "#8c8984",
             ltime: [],
-            tutor: "Ursula Jahn"
+            tutor: "Theresa Weissenböck"
           },
           {
             lessonid: 18,
@@ -274,7 +272,7 @@
             active: false,
             btncolor: "#99691a",
             ltime: [],
-            tutor: "Ursula Jahn"
+            tutor: "Sandra Kiendler"
           },
           {
             lessonid: 19,
@@ -283,7 +281,7 @@
             active: false,
             btncolor: "#5fc441",
             ltime: [],
-            tutor: "Ursula Jahn"
+            tutor: "Karin Juza"
           },
           {
             lessonid: 20,
@@ -292,7 +290,7 @@
             active: false,
             btncolor: "#a1894c",
             ltime: [],
-            tutor: "Ursula Jahn"
+            tutor: "Wolfgang Hoffelner"
           },
         ],
         activeLessons: []
