@@ -121,6 +121,7 @@
             active: false,
             btncolor: "green",
             ltime: [],
+            tutor: "Ursula Jahn"
           },
           {
             lessonid: 2,
@@ -129,6 +130,7 @@
             active: false,
             btncolor: "red",
             ltime: [],
+            tutor: "Ursula Jahn"
           },
           {
             lessonid: 3,
@@ -137,6 +139,7 @@
             active: false,
             btncolor: "grey",
             ltime: [],
+            tutor: "Ursula Jahn"
           },
           {
             lessonid: 4,
@@ -145,6 +148,7 @@
             active: false,
             btncolor: "lightblue",
             ltime: [],
+            tutor: "Ursula Jahn"
           },
           {
             lessonid: 5,
@@ -153,6 +157,7 @@
             active: false,
             btncolor: "#e8e289",
             ltime: [],
+            tutor: "Ursula Jahn"
           },
           {
             lessonid: 6,
@@ -161,6 +166,7 @@
             active: false,
             btncolor: "#f7d497",
             ltime: [],
+            tutor: "Ursula Jahn"
           },
           {
             lessonid: 7,
@@ -169,6 +175,7 @@
             active: false,
             btncolor: "#c0c6cf",
             ltime: [],
+            tutor: "Ursula Jahn"
           },
           {
             lessonid: 8,
@@ -177,6 +184,7 @@
             active: false,
             btncolor: "#83aef2",
             ltime: [],
+            tutor: "Ursula Jahn"
           },
           {
             lessonid: 9,
@@ -185,6 +193,7 @@
             active: false,
             btncolor: "#eda64e",
             ltime: [],
+            tutor: "Ursula Jahn"
           },
           {
             lessonid: 10,
@@ -193,6 +202,7 @@
             active: false,
             btncolor: "#41aee0",
             ltime: [],
+            tutor: "Ursula Jahn"
           },
           {
             lessonid: 11,
@@ -201,6 +211,7 @@
             active: false,
             btncolor: "#293791",
             ltime: [],
+            tutor: "Ursula Jahn"
           },
           {
             lessonid: 12,
@@ -209,6 +220,7 @@
             active: false,
             btncolor: "#c4b164",
             ltime: [],
+            tutor: "Ursula Jahn"
           },
           {
             lessonid: 13,
@@ -217,6 +229,7 @@
             active: false,
             btncolor: "#2bba23",
             ltime: [],
+            tutor: "Ursula Jahn"
           },
           {
             lessonid: 14,
@@ -225,6 +238,7 @@
             active: false,
             btncolor: "#7f8a7f",
             ltime: [],
+            tutor: "Ursula Jahn"
           },
           {
             lessonid: 15,
@@ -233,6 +247,7 @@
             active: false,
             btncolor: "#825214",
             ltime: [],
+            tutor: "Ursula Jahn"
           },
           {
             lessonid: 16,
@@ -241,6 +256,7 @@
             active: false,
             btncolor: "#f0e0c9",
             ltime: [],
+            tutor: "Ursula Jahn"
           },
           {
             lessonid: 17,
@@ -249,6 +265,7 @@
             active: false,
             btncolor: "#8c8984",
             ltime: [],
+            tutor: "Ursula Jahn"
           },
           {
             lessonid: 18,
@@ -257,6 +274,7 @@
             active: false,
             btncolor: "#99691a",
             ltime: [],
+            tutor: "Ursula Jahn"
           },
           {
             lessonid: 19,
@@ -265,6 +283,7 @@
             active: false,
             btncolor: "#5fc441",
             ltime: [],
+            tutor: "Ursula Jahn"
           },
           {
             lessonid: 20,
@@ -273,6 +292,7 @@
             active: false,
             btncolor: "#a1894c",
             ltime: [],
+            tutor: "Ursula Jahn"
           },
         ],
         activeLessons: []
@@ -282,12 +302,6 @@
       this.fillLdays();
     },
     methods: {
-      /*getSubmit(values){
-        this.Anmeldedaten.Name = values.name;
-        this.Anmeldedaten.Telefonnummer = values.phone;
-        this.Anmeldedaten.Emailadresse = values.email;
-        console.log(this.Anmeldedaten)
-      },*/
       isValid() {
         return this.activeLessons.length >= 2 ? false : true;
       },

@@ -8,13 +8,13 @@
         "
     >
       <v-card width="80%">
-        <h2 style="margin: 20px">Anmeldeformular</h2>
+        <h2 style="margin: 20px">Anmeldeformular Sommerschule 2023</h2>
         <form @submit.prevent="submit">
           <h3>Angaben KursteilnehmerIn</h3>
           <v-text-field
-            v-model="name.value.value"
+            v-model="nameKT.value.value"
             :counter="2"
-            :error-messages="name.errorMessage.value"
+            :error-messages="nameKT.errorMessage.value"
             label="Name KursteilnehmerIn"
           ></v-text-field>
 
@@ -26,67 +26,67 @@
           ></v-text-field>
 
           <v-text-field
-            v-model="name.value.value"
+            v-model="plzOrtKT.value.value"
             :counter="2"
-            :error-messages="name.errorMessage.value"
-            label="PLZ Ort"
+            :error-messages="plzOrtKT.errorMessage.value"
+            label="PLZ und Ort - Kursteilnehmer"
           ></v-text-field>
 
           <v-text-field
-            v-model="name.value.value"
+            v-model="streetHnKT.value.value"
             :counter="2"
-            :error-messages="name.errorMessage.value"
-            label="Straße, Hausnr."
+            :error-messages="streetHnKT.errorMessage.value"
+            label="Straße, Hausnr. Kursteilehmer"
           ></v-text-field>
 
           <v-text-field
-            v-model="name.value.value"
+            v-model="sVNr.value.value"
             :counter="2"
-            :error-messages="name.errorMessage.value"
+            :error-messages="sVNr.errorMessage.value"
             label="SV-Nummer"
           ></v-text-field>
 
           <v-text-field
-            v-model="name.value.value"
+            v-model="citicenship.value.value"
             :counter="2"
-            :error-messages="name.errorMessage.value"
+            :error-messages="citicenship.errorMessage.value"
             label="Staatsbürgerschaft"
           ></v-text-field>
 
           <v-text-field
-            v-model="phone.value.value"
+            v-model="schoolKT.value.value"
             :counter="2"
-            :error-messages="phone.errorMessage.value"
+            :error-messages="schoolKT.errorMessage.value"
             label="Schule aktuell"
           ></v-text-field>
           
           <h3>Angaben Erziehungsberechtigte(r)</h3>
 
           <v-text-field
-            v-model="name.value.value"
+            v-model="title.value.value"
             :counter="2"
-            :error-messages="name.errorMessage.value"
+            :error-messages="title.errorMessage.value"
             label="Akad. Grad / Titel"
           ></v-text-field>
 
           <v-text-field
-            v-model="name.value.value"
+            v-model="nameParent.value.value"
             :counter="2"
-            :error-messages="name.errorMessage.value"
+            :error-messages="nameParent.errorMessage.value"
             label="Name Erziehungsberechtigter"
           ></v-text-field>
   
           <v-text-field
-            v-model="phone.value.value"
+            v-model="plzOrtParent.value.value"
             :counter="2"
-            :error-messages="phone.errorMessage.value"
-            label="PLZ, Ort"
+            :error-messages="plzOrtParent.errorMessage.value"
+            label="PLZ und Ort - Erziehungsberechtigter"
           ></v-text-field>
 
           <v-text-field
-            v-model="phone.value.value"
+            v-model="streetHnParent.value.value"
             :counter="2"
-            :error-messages="phone.errorMessage.value"
+            :error-messages="streetHnParent.errorMessage.value"
             label="Straße, Hausnummer"
           ></v-text-field>
 
@@ -120,29 +120,73 @@
     props: ['kurse'],
     data(){
       return{
-        Anmeldedaten: {
-          Name: "Kerstin Hahn",
-          NameErzieh: "Anita Hahn",
-          Adresse: "Sonnenstraße 23 4020 Linz",
-          Telefonnummer: "0664123456",
-          Emailadresse: "asdf@irgendwas.at",
-        },
+        AnmeldedatenKT: {},
+        AnmeldedatenParent: {}
       }
     },
     setup() {
       const { handleSubmit, handleReset } = useForm({
         validationSchema: {
-          name(value) {
+          //KT = Kursteilnehmer
+          nameKT(value) {
             if (value?.length >= 2) return true;
   
             //return "Name needs to be at least 2 characters.";
           },
-
           bDate(value){
             if (value?.length > 9 && /[0-9-]+/.test(value)) return true;
   
             return "Geburtsdatum muss in der Form TT.MM.JJJJ eingegeben werden.";
           },
+          plzOrtKT(value) {
+            if (value?.length >= 2) return true;
+  
+            //return "Name needs to be at least 2 characters.";
+          },
+          streetHnKT(value) {
+            if (value?.length >= 2) return true;
+  
+            //return "Name needs to be at least 2 characters.";
+          },
+          sVNr(value) {
+            if (value?.length >= 2) return true;
+  
+            //return "Name needs to be at least 2 characters.";
+          },
+          citicenship(value) {
+            if (value?.length >= 2) return true;
+  
+            //return "Name needs to be at least 2 characters.";
+          },
+          schoolKT(value) {
+            if (value?.length >= 2) return true;
+  
+            //return "Name needs to be at least 2 characters.";
+          },
+
+          
+          //Parents
+          title(value) {
+            if (value?.length >= 2) return true;
+            
+            //return "Name needs to be at least 2 characters.";
+          },
+          nameParent(value) {
+            if (value?.length >= 2) return true;
+  
+            //return "Name needs to be at least 2 characters.";
+          },
+          plzOrtParent(value) {
+            if (value?.length >= 2) return true;
+  
+            //return "Name needs to be at least 2 characters.";
+          },
+          streetHnKTParent(value) {
+            if (value?.length >= 2) return true;
+  
+            //return "Name needs to be at least 2 characters.";
+          },
+
           phone(value) {
             if (value?.length > 9 && /[0-9-]+/.test(value)) return true;
   
@@ -151,12 +195,21 @@
           email(value) {
             if (/^[a-z.-]+@[a-z.-]+\.[a-z]+$/i.test(value)) return true;
   
-            //return "Must be a valid e-mail.";
+            return "Must be a valid e-mail.";
           },
         },
       });
-      const name = useField("name");
+      const nameKT = useField("nameKT");
       const bDate = useField("bDate");
+      const plzOrtKT = useField("PLZ und Ort - Kursteilnehmer")
+      const streetHnKT = useField("Straße, Hausnr. Kursteilehmer");
+      const sVNr = useField("SV-Nummer");
+      const citicenship = useField("Staatsbürgerschaft");
+      const schoolKT = useField("Schule aktuell");
+      const title = useField("Akad. Grad / Titel");
+      const nameParent = useField("Name Erziehungsberechtigter");
+      const plzOrtParent = useField("PLZ und Ort - Erziehungsberechtigter");
+      const streetHnParent = useField("Straße, Hausnummer");
       const phone = useField("phone");
       const email = useField("email");
   
@@ -164,31 +217,52 @@
         alert(JSON.stringify(values, null, 2));
       });
   
-      return { name, bDate, phone, email, submit, handleReset };
+      return { nameKT, bDate, plzOrtKT, streetHnKT, phone, email, sVNr, citicenship, schoolKT, title, nameParent, plzOrtParent, streetHnParent, submit, handleReset };
     },
 
     methods:{
       submit() {
         //TODO
         //this.$emit('onSubmit', {name: this.name.value.value, phone: this.phone.value.value, email: this.email.value.value})
-        this.Anmeldedaten.Name = this.name.value.value;
-        this.Anmeldedaten.Telefonnummer = this.phone.value.value;
-        this.Anmeldedaten.Emailadresse = this.email.value.value;
+        this.AnmeldedatenKT.Name = this.nameKT.value.value;
+        this.AnmeldedatenKT.bDate = this.bDate.value.value;
+        this.AnmeldedatenKT.streetHnKT = this.streetHnKT.value.value;
+        this.AnmeldedatenKT.plzOrtKT = this.plzOrtKT.value.value;
+        this.AnmeldedatenKT.sVNr = this.sVNr.value.value;
+        this.AnmeldedatenKT.citicenship = this.citicenship.value.value;
+        this.AnmeldedatenKT.schoolKT = this.schoolKT.value.value;
+        this.AnmeldedatenParent.title = this.title.value.value;
+        this.AnmeldedatenParent.nameParent = this.nameParent.value.value;
+        this.AnmeldedatenParent.streetHnParent = this.streetHnParent.value.value;
+        this.AnmeldedatenParent.plzOrtParent = this.plzOrtParent.value.value;
+        this.AnmeldedatenParent.phone = this.phone.value.value;
+        this.AnmeldedatenParent.email = this.email.value.value;
         this.getPDF();
       },
       getPDF() {
         const doc = new jsPDF();
         doc.setFontSize(20);
         doc.text("Sommerschule 2023 - Gymnasium Bad Leonfelden", 15, 20);
-  
         doc.setFontSize(10);
         doc.text("Hagauerstraße 17, 4190 Bad Leonfelden", 70, 27);
         doc.line(15, 30, 190, 30);
         doc.setFontSize(10);
-        doc.text(`KursteilnehmerIn: ${this.Anmeldedaten.Name}`, 15, 50);
-        doc.text(`Adresse: ${this.Anmeldedaten.Adresse}`, 15, 56);
-        doc.text(`Telefonnummer: ${this.Anmeldedaten.Telefonnummer}`, 15, 62);
-        doc.text(`Emailadresse: ${this.Anmeldedaten.Emailadresse}`, 15, 68);
+        //Kursteilehmer
+        doc.text(`KursteilnehmerIn: ${this.AnmeldedatenKT.Name}`, 15, 50);
+        doc.text(`Geburtsdatum: ${this.AnmeldedatenKT.bDate}`, 15, 56);
+        doc.text(`Straße, Hausnummer: ${this.AnmeldedatenKT.streetHnKT}`, 15, 62);
+        doc.text(`Plz, Ort: ${this.AnmeldedatenKT.plzOrtKT}`, 15, 68);
+        doc.text(`Sozialversicherungsnummer: ${this.AnmeldedatenKT.sVNr}`, 15, 74);
+        doc.text(`Staatsbürgerschaft: ${this.AnmeldedatenKT.citicenship}`, 15, 80);
+        doc.text(`Aktuelle Schule: ${this.AnmeldedatenKT.schoolKT}`, 15, 86);
+        //Parents
+        doc.text(`Titel: ${this.AnmeldedatenParent.title}`, 15, 160);
+        doc.text(`Name: ${this.AnmeldedatenParent.nameParent}`, 15, 166);
+        doc.text(`Straße, Hausnummer: ${this.AnmeldedatenParent.streetHnParent}`, 15, 172);
+        doc.text(`Plz, Ort: ${this.AnmeldedatenParent.plzOrtParent}`, 15, 178);
+        doc.text(`Telefonnummer: ${this.AnmeldedatenParent.phone}`, 15, 184);
+        doc.text(`Email-Adresse: ${this.AnmeldedatenParent.email}`, 15, 190);
+        
   
         doc.setFontSize(15);
         doc.text("Gewählte Kurse:", 15, 105);
@@ -199,7 +273,7 @@
   
           theme: "plain",
           head: [["Kursname", "Termine", "Kursleiter"]],
-          body: tableData.map((item) => [item.lessonname, item.ltime]),
+          body: tableData.map((item) => [item.lessonname, item.ltime, item.tutor]),
         });
   
         doc.text("Unterschrift Erziehungsberechtigte(r):", 15, 230);

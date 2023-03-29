@@ -37,60 +37,59 @@
         lessons: [
           {
             title: "Weltreise (GW)",
-            tutor: "WT",
+            tutor: "Theresa Weissenböck",
             text:
               "Eine Weltreise mit allen Sinnen Wir erkunden unterschiedliche Länder der Welt und lernen die Kultur, die Kulinarik, die Gewohnheiten der Menschen, die Musik und die Landschaft der einzelnen Staaten näher kennen.",
           },
           {
             title: "3D-Modelling",
-            tutor: "HW",
+            tutor: "Wolfgang Hoffelner",
             text:
               "Wir lernen das 3D-Animationsprogramm “Blender” kennen und ergründen, wie in Filmen und Computerspielen Charaktere und ganze Welten entstehen.",
           },
           {
             title: "Filzen",
-            tutor: "HK",
+            tutor: "Katharina Hoffelner",
             text:
               "Wir gestalten mittels der flächenbildenden Technik “Filzen” aus Schafwolle eine Handy- oder Tablet Hülle sowie andere kleine gefilzte Gegenstände nach Wunsch (Unkostenbeitrag 20€/Person)Max. 12 TeilnehmerInnenMitzubringen: 1 altes Handtuch",
           },
           {
             title: "Keramik",
-            tutor: "HK",
+            tutor: "Katharina Hoffelner",
             text:
               "Wir lernen einige keramische Aufbaumethoden kennen und gestalten ein fantastisches Tierwesen mit dem Werkstoff Ton. (Unkostenbeitrag 10€/ Person)Max. 12 TeilnehmerInnen",
           },
           {
             title: "Italienisch",
-            tutor: "BI",
+            tutor: "Isabella Biebl",
             text:
               "Ciao ragazzi! Du möchtest mehr als Pizza, Pasta und Ciao verstehen? Dann tauche ein in die italienische Sprache und lerne spielerisch erste Basics des Italienischen kennen. Ci vediamo! ",
           },
           {
             title: "Französisch",
-            tutor: "BI",
+            tutor: "Isabella Biebl",
             text:
               "Möchtest du gerne wissen, wie Französisch wirklich ist? Dann lass uns gemeinsam erste Eindrücke der französischen Sprache sammeln! Auf spielerische Weise geht’s in die Heimat von Baguette, Croissant und Eiffelturm! ",
           },
           {
             title: "Foto/Cyanotypie",
-            tutor: "STR",
+            tutor: "Anna Strasser",
             text:
               "Entdecke die Welt der Fotografie und experimentiere mit einem alten Druckverfahren - der Cyanotypie! Verbessere deine fotografischen Fähigkeiten und lerne, wie man die Bilder in einem einzigartigen blauen Farbton entwickelt.",
           },
-          { title: "", tutor: "", text: "" },
-          { title: "", tutor: "", text: "" },
-          { title: "", tutor: "", text: "" },
-          { title: "", tutor: "", text: "" },
-          { title: "", tutor: "", text: "" },
-          { title: "", tutor: "", text: "" },
-          { title: "", tutor: "", text: "" },
-          { title: "", tutor: "", text: "" },
-          { title: "", tutor: "", text: "" },
-          { title: "", tutor: "", text: "" },
-          { title: "", tutor: "", text: "" },
-          { title: "", tutor: "", text: "" },
-          { title: "", tutor: "", text: "" },
-          { title: "", tutor: "", text: "" },
+          { title: "Bewegtes Leben, bewegtes Lernen ", tutor: "Stefan Dollhäubl-Lehmann ", text: "Ausgehend von Balance und Ausrichtung im Gegensatz zu einer Position, wird bewusstes Denken und Entscheiden in Bewegung vorgestellt und ausprobiert. Und was passiert im Körper, wenn wir uns bewegen – ein kurzer Theorieteil soll den auf Praxis ausgerichteten Kurs abrunden." },
+          { title: "Schach", tutor: "Philipp Türkis", text: "" },
+          { title: "Spanisch", tutor: "Ivana Glava", text: "" },
+          { title: "Chirurgisches Nähen", tutor: "Ursula Jahn", text: "Größere Verletzungen der Haut verheilen schneller, wenn zusammengehörige Wundschichten spannungsfrei aneinander liegen. Hierbei kommt das chirurgische Nähen zum Einsatz, um die Wundheilung zu begünstigen. In diesem Kurs beschäftigen wir uns näher mit dem Aufbau der Haut und probieren verschiedene Naht- und Knotentechniken für einen erfolgreichen Wundverschluss aus." },
+          { title: "Philosophie", tutor: "Tina Schmid-Ratzenböck", text: "Mit Textauszügen aus dem Buch “Sophies Welt” von Jostein Gaarder werden wir uns spannende Einblicke in verschiedene Gebiete der Philosophie erarbeiten. Ziel ist, dass schon Jugendliche Interesse an philosophischen Themen entwickeln und die Philosophie nicht als abgehobenes, abstraktes Fach sehen. " },
+          { title: "Englisch", tutor: "Sandra Kiendler", text: "Game on! – oder doch Game Over? Bist du der Protagonist deines Spiels oder bloß NPC? Lerne das faszinierende Universum des Gamings kennen und die Sprache, die du brauchst, um dich in der komplexen Welt der Spiele – online und offline – zurechtzufinden." },
+          { title: "Spieleprogrammierung", tutor: "Stefan Leutgeb", text: "" },
+          { title: "Chor", tutor: "Stefan Kapeller", text: "" },
+          { title: "Percussion", tutor: "Stefan Kapeller", text: "" },
+          { title: "Gesang", tutor: "Alexandra Diesterhöft", text: "" },
+          { title: "Tontechnik", tutor: "Paul Katzmayr", text: "" },
+          { title: "Biologie", tutor: "", text: "" },
+          { title: "flex-Based Learning in Chemie	", tutor: "Karin Juza", text: "Du denkst, dass Kreativität nur in der Kunst gefragt ist? Lass dich vom Gegenteil überzeugen und lerne in diesem Workshop alltägliche Probleme und chemische Aufgaben mit Fantasie und Witz zu lösen. In deinem Team werden vielfältige Lösungswege entwickelt und danach im Labor auf ihre Machbarkeit untersucht. Mindestteilnehmeranzahl: 5 " },
         ],
       };
     },
