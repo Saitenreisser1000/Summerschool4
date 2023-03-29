@@ -1,14 +1,13 @@
 <template>
     <v-container style="max-width: 1200px;">
       <h1 style="text-align: center;">Sommerschule - Gymnasium Bad Leonfelden</h1>
+      <h2 style="text-align: center;">Kursangebot</h2>
       <br />
       <hr />
       <br />
       <v-btn><router-link class="routerlink" to="/lessontable">Zur Anmeldung</router-link></v-btn>
       <br />
-      <br />
-      <h2>Kursangebot:</h2>
-      <v-card v-for="(lesson, i) in lessons" :key="i" class="ma-6">
+      <v-card style="margin-top: 25px;" v-for="(lesson, i) in lessons" :key="i" >
         <v-row no-gutters>
           <v-col cols="2">
             <v-img

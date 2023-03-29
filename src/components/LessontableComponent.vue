@@ -2,13 +2,13 @@
     <div>
       <v-container style="max-width: 1200px;">
           <h1 style="text-align: center;">Sommerschule - Gymnasium Bad Leonfelden</h1>
+          <h2 style="text-align: center;">Wochenplan</h2>
           <br />
           <hr />
           <br />
           <v-btn><router-link class="routerlink" to="/">Zur Kursübersicht</router-link></v-btn>
-          <h2 style="margin: 20px">Wochenplan</h2>
-  
-          <v-table width="500px" :mobile-breakpoint="600" :stacked="xs">
+          <br />
+          <v-table style="margin-top: 25px;" width="500px" :mobile-breakpoint="600">
             <thead>
               <tr>
                 <th>Montag 8:00-9:45</th>
@@ -67,10 +67,11 @@
               :disabled="isValid()"><router-link :to="`/form/${this.getActiveLessonsJSON()}`">Zum Anmeldeformular (mind. 2 Kurse auswählen)</router-link></v-btn>
             </v-container>
             <br>
-            <p>
-              Das Anmeldeformular bitte über folgenden Link downloaden und
+            <p style="text-align: center;">
+              Das Anmeldeformular bitte über folgenden Link ausfüllen und
               unterschrieben an sommerschule@borgleon.at senden.
             </p>
+            <br>
             <v-card style="width: 600px">
               <v-list>
                 <v-list-subheader>gewählte Kurse:</v-list-subheader>

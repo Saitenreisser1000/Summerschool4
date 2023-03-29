@@ -9,7 +9,11 @@
         "
     >
       <v-card width="80%">
-        <h2 style="margin: 20px">Anmeldeformular Sommerschule 2023</h2>
+        <h1 style="text-align: center;">Sommerschule - Gymnasium Bad Leonfelden</h1>
+        <h2 style="text-align: center;">Anmeldeformular</h2>
+        <br>
+        <hr>
+        <br>
         <form @submit.prevent="submit">
           <h3>Angaben KursteilnehmerIn</h3>
           <v-text-field
@@ -60,7 +64,8 @@
             :error-messages="schoolKT.errorMessage.value"
             label="Schule aktuell"
           ></v-text-field>
-          
+          <br>  
+          <br>
           <h3>Angaben Erziehungsberechtigte(r)</h3>
 
           <v-text-field
@@ -103,11 +108,13 @@
             :error-messages="email.errorMessage.value"
             label="E-mail"
           ></v-text-field>
-  
+          <br>
           <v-btn class="me-4" type="submit"> Anmeldeformular Laden </v-btn>
   
           <v-btn @click="handleReset"> Löschen </v-btn>
         </form>
+        <br>
+        <br>
       </v-card>
     </v-container>
   </template>
