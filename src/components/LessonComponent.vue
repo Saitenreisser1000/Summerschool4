@@ -38,35 +38,35 @@
           {
             title: "Weltreise (GW)",
             tutor: "Theresa Weissenböck",
-            pic: "./src/assets/pics/Filzkurs.jpg",
+            pic: "/pics/Filzkurs.jpg",
             text:
               "Eine Weltreise mit allen Sinnen Wir erkunden unterschiedliche Länder der Welt und lernen die Kultur, die Kulinarik, die Gewohnheiten der Menschen, die Musik und die Landschaft der einzelnen Staaten näher kennen.",
           },
           {
             title: "3D-Modelling",
             tutor: "Wolfgang Hoffelner",
-            pic: "./src/assets/pics/3D-Modeling.jpg",
+            pic: "/pics/3D-Modeling.jpg",
             text:
               "Wir lernen das 3D-Animationsprogramm “Blender” kennen und ergründen, wie in Filmen und Computerspielen Charaktere und ganze Welten entstehen.",
           },
           {
             title: "Filzen",
             tutor: "Katharina Hoffelner",
-            pic: "./src/assets/pics/Filzkurs.jpg",
+            pic: "/pics/Filzkurs.jpg",
             text:
               "Wir gestalten mittels der flächenbildenden Technik “Filzen” aus Schafwolle eine Handy- oder Tablet Hülle sowie andere kleine gefilzte Gegenstände nach Wunsch (Unkostenbeitrag 20€/Person)Max. 12 TeilnehmerInnenMitzubringen: 1 altes Handtuch",
           },
           {
             title: "Keramik",
             tutor: "Katharina Hoffelner",
-            pic: "./src/assets/pics/Keramikkurs.jpg",
+            pic: "/pics/Keramikkurs.jpg",
             text:
               "Wir lernen einige keramische Aufbaumethoden kennen und gestalten ein fantastisches Tierwesen mit dem Werkstoff Ton. (Unkostenbeitrag 10€/ Person)Max. 12 TeilnehmerInnen",
           },
           {
             title: "Italienisch",
             tutor: "Isabella Biebl",
-            pic: "./src/assets/pics/Italienisch.jpeg",
+            pic: "/pics/Italienisch.jpeg",
             text:
               "Ciao ragazzi! Du möchtest mehr als Pizza, Pasta und Ciao verstehen? Dann tauche ein in die italienische Sprache und lerne spielerisch erste Basics des Italienischen kennen. Ci vediamo! ",
           },
