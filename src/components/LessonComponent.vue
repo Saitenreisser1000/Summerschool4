@@ -21,7 +21,8 @@
               <v-card-title style="margin: 0 0 10px 10px">{{
                 lesson.title
               }}</v-card-title>
-              <v-card-text style="text-align: left">{{
+              <v-card-subtitle style="margin: 0 0 0px 10px">KursleiterIn: {{ lesson.tutor }}</v-card-subtitle>
+              <v-card-text>{{
                 lesson.text
               }}</v-card-text>
             </v-card-item>
@@ -88,15 +89,15 @@
           { title: "Bewegtes Leben, bewegtes Lernen ", tutor: "Stefan Dollhäubl-Lehmann ", pic: "/pics/Bewegtes Leben, bewegtes Lernen.jpg", text: "Ausgehend von Balance und Ausrichtung im Gegensatz zu einer Position, wird bewusstes Denken und Entscheiden in Bewegung vorgestellt und ausprobiert. Und was passiert im Körper, wenn wir uns bewegen – ein kurzer Theorieteil soll den auf Praxis ausgerichteten Kurs abrunden." },
           { title: "Schach", tutor: "Philipp Türkis", pic: "/pics/Schach.jpg", text: "" },
           { title: "Spanisch", tutor: "Ivana Glavas", text: "" },
-          { title: "Chirurgisches Nähen", tutor: "Ursula Jahn", text: "Größere Verletzungen der Haut verheilen schneller, wenn zusammengehörige Wundschichten spannungsfrei aneinander liegen. Hierbei kommt das chirurgische Nähen zum Einsatz, um die Wundheilung zu begünstigen. In diesem Kurs beschäftigen wir uns näher mit dem Aufbau der Haut und probieren verschiedene Naht- und Knotentechniken für einen erfolgreichen Wundverschluss aus." },
+          { title: "Chirurgisches Nähen", tutor: "Ursula Jahn", pic: "/pics/Chirurgisches Nähen.jpg", text: "Größere Verletzungen der Haut verheilen schneller, wenn zusammengehörige Wundschichten spannungsfrei aneinander liegen. Hierbei kommt das chirurgische Nähen zum Einsatz, um die Wundheilung zu begünstigen. In diesem Kurs beschäftigen wir uns näher mit dem Aufbau der Haut und probieren verschiedene Naht- und Knotentechniken für einen erfolgreichen Wundverschluss aus." },
           { title: "Philosophie", tutor: "Tina Schmid-Ratzenböck", pic: "/pics/Sofies-Welt.png", text: "Mit Textauszügen aus dem Buch “Sophies Welt” von Jostein Gaarder werden wir uns spannende Einblicke in verschiedene Gebiete der Philosophie erarbeiten. Ziel ist, dass schon Jugendliche Interesse an philosophischen Themen entwickeln und die Philosophie nicht als abgehobenes, abstraktes Fach sehen. " },
           { title: "Englisch", tutor: "Sandra Kiendler", pic: "/pics/Gaming_English.jpg", text: "Game on! – oder doch Game Over? Bist du der Protagonist deines Spiels oder bloß NPC? Lerne das faszinierende Universum des Gamings kennen und die Sprache, die du brauchst, um dich in der komplexen Welt der Spiele – online und offline – zurechtzufinden." },
           { title: "Spieleprogrammierung", tutor: "Stefan Leutgeb", pic: "/pics/gamerzone.jpg", text: "Du interessierst dich für Computerspiele und hast dich schon gefragt, wie man diese selbst erstellen kann? Dann bist du hier genau richtig! Wir werden in diesem Kurs kleine Spiele mit der Programmierumgebung Scratch entwickeln." },
           { title: "Chor", tutor: "Stefan Kapeller", text: "" },
           { title: "Percussion", tutor: "Stefan Kapeller", text: "" },
-          { title: "Gesang", tutor: "Alexandra Diesterhöft", pic: "/pics/singen.jpg", text: "" },
+          { title: "Gesang", tutor: "Alexandra Diesterhöft", pic: "/pics/singen.jpg", text: "Singen macht Spaß, singen tut gut! Gemeinsam begeben wir uns auf eine musikalische Reise des Ensemblegesangs und entdecken die Vielfältigkeit Deiner Stimme." },
           { title: "Tontechnik", tutor: "Paul Katzmayr", text: "" },
-          { title: "Biologie", tutor: "", pic: "/pics/Biologie_Kneidinger1.jpg", text: "" },
+          { title: "Biologie", tutor: "Marlene Kneidinger", pic: "/pics/Biologie_Kneidinger1.jpg", text: "Sezierworkshop: Herz, Lunge & Co. Du hast dich schon immer für den konkreten Aufbau von Organen und die Präparation dieser interessiert? Dann bist du in diesem Kurs genau richtig! Wir werden gemeinsam Herz, Lunge und Niere eines Schweins sezieren und den Aufbau dieser Organe genau unter die Lupe nehmen. Max. 12 TeilnehmerInnen  " },
           { title: "flex-Based Learning in Chemie © School of Creative Solutions	", tutor: "Karin Juza", pic: "/pics/Foto Sommerschule Chemie.JPG", text: "Du denkst, dass Kreativität nur in der Kunst gefragt ist? Lass dich vom Gegenteil überzeugen und lerne in diesem Workshop alltägliche Probleme und chemische Aufgaben mit Fantasie und Witz zu lösen. In deinem Team werden vielfältige Lösungswege entwickelt und danach im Labor auf ihre Machbarkeit untersucht. Mindestteilnehmeranzahl: 5 " },
         ],
       };
