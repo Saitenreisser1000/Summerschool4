@@ -10,7 +10,7 @@
           <br />
           <v-btn><router-link class="routerlink" to="/">Zur Kursübersicht</router-link></v-btn>
           <br />
-          <v-table style="margin-top: 25px;" width="500px" :mobile-breakpoint="600">
+          <v-table style="margin-top: 25px;" width="500px">
             <thead>
               <tr>
                 <th>Montag 8:00-9:40</th>
@@ -74,19 +74,21 @@
               unterschrieben an sommerschule@borgleon.at senden.
             </p>
             <br>
-            <v-card style="width: 600px">
-              <v-list>
-                <v-list-subheader>gewählte Kurse:</v-list-subheader>
-                <v-list-item
-                  style="text-align: left"
-                  variant="text"
-                  v-for="(lesson, i) in this.getActiveLessons()"
-                  :key="i"
-                >
-                  {{ lesson.lessonname + ":  " + lesson.ltime }}
-                </v-list-item>
-              </v-list>
-            </v-card>
+            <v-container style="display:flex; justify-content: center; " >
+              <v-card style="width: 600px">
+                <v-list>
+                  <v-list-subheader>gewählte Kurse:</v-list-subheader>
+                  <v-list-item
+                    style="text-align: left"
+                    variant="text"
+                    v-for="(lesson, i) in this.getActiveLessons()"
+                    :key="i"
+                  >
+                    {{ lesson.lessonname + ":  " + lesson.ltime }}
+                  </v-list-item>
+                </v-list>
+              </v-card>
+            </v-container>
           
       </v-container>
     </div>
@@ -313,13 +315,13 @@
         this.daysEarly.forEach((day) => {
           day.lid.forEach((lid) => {
             this.getLesson(lid).ldays.push(day);
-            this.getLesson(lid).ltime.push(` ${day.day} - ${day.time}`);
+            this.getLesson(lid).ltime.push(` ${day.day} um ${day.time}`);
           });
         });
         this.daysLate.forEach((day) => {
           day.lid.forEach((lid) => {
             this.getLesson(lid).ldays.push(day);
-            this.getLesson(lid).ltime.push(` ${day.day}-${day.time}`);
+            this.getLesson(lid).ltime.push(` ${day.day} um ${day.time}`);
           });
         });
       },
@@ -380,6 +382,7 @@
   td {
     border: 1px solid #ddd;
     padding: 5px !important;
+    text-align:center;
   }
   
   th {
