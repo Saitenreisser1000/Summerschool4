@@ -10,6 +10,8 @@
     >
       <v-card width="80%">
         <h1 style="text-align: center;">Sommerschule - Gymnasium Bad Leonfelden</h1>
+        <h2 style="text-align: center;">4. - 8. September 2023</h2>
+        <br>
         <h2 style="text-align: center;">Anmeldeformular</h2>
         <br>
         <hr>
@@ -271,6 +273,10 @@
         doc.text(`Telefonnummer: ${this.AnmeldedatenParent.phone}`, 15, 184);
         doc.text(`Email-Adresse: ${this.AnmeldedatenParent.email}`, 15, 190);
         
+        doc.setFontSize(10);
+        doc.text("Ich stimme der Verarbeitung meiner angegebenen Daten und jener meines Kindes zum Zweck der Anmeldung zur", 15,210);
+        doc.text("Sommerschule 2023 im BMBWF, im BKA, in der zuständigen Bildungsdirektion, im zuständigen Finanzamt sowie in", 15, 215);
+        doc.text("den teilnehmenden Schulstandorten gemäß der schulrechtlichen Rechtsgrundlagen zu.", 15, 220)
   
         doc.setFontSize(15);
         doc.text("Gewählte Kurse:", 15, 105);
@@ -284,16 +290,16 @@
           body: tableData.map((item) => [item.lessonname, item.ltime, item.tutor]),
         });
   
-        doc.text("Unterschrift Erziehungsberechtigte(r):", 15, 230);
-        doc.line(105, 230, 190, 230);
+        doc.text("Unterschrift Erziehungsberechtigte(r):", 15, 240);
+        doc.line(105, 240, 190, 240);
   
         doc.setFontSize(12);
         doc.text(
           "Um die Anmeldung abzuschließen, senden Sie das unterschriebene Formular an:",
           15,
-          255
+          265
         );
-        doc.text("sommerschule@borgleon.at", 15, 262);
+        doc.text("sommerschule@borgleon.at", 70, 272);
   
         doc.save("Sommerschule.pdf");
       },

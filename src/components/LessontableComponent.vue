@@ -2,6 +2,8 @@
     <div>
       <v-container style="max-width: 1200px;">
           <h1 style="text-align: center;">Sommerschule - Gymnasium Bad Leonfelden</h1>
+          <h2 style="text-align: center;">4. - 8.September.2023</h2>
+          <br>  
           <h2 style="text-align: center;">Wochenplan</h2>
           <br />
           <hr />
@@ -11,11 +13,11 @@
           <v-table style="margin-top: 25px;" width="500px" :mobile-breakpoint="600">
             <thead>
               <tr>
-                <th>Montag 8:00-9:45</th>
-                <th>Dienstag 8:00-9:45</th>
-                <th>Mittwoch 8:00-9:45</th>
-                <th>Donnerstag 8:00-9:45</th>
-                <th>Freitag 8:00-9:45</th>
+                <th>Montag 8:00-9:40</th>
+                <th>Dienstag 8:00-9:40</th>
+                <th>Mittwoch 8:00-9:40</th>
+                <th>Donnerstag 8:00-9:40</th>
+                <th>Freitag 8:00-9:40</th>
               </tr>
             </thead>
             <tbody>
@@ -37,11 +39,11 @@
               </tr>
               <br />
               <tr>
-                <th>Montag 10:00-11:45</th>
-                <th>Dienstag 10:00-11:45</th>
-                <th>Mittwoch 10:00-11:45</th>
-                <th>Donnerstag 10:00-11:45</th>
-                <th>Freitag 10:00-11:45</th>
+                <th>Montag 9:50-11:30</th>
+                <th>Dienstag 9:50-11:30</th>
+                <th>Mittwoch 9:50-11:30</th>
+                <th>Donnerstag 9:50-11:30</th>
+                <th>Freitag 9:50-11:30</th>
               </tr>
               <tr v-for="i in 4" :key="i">
                 <td v-for="day in daysLate" :key="day.day">
@@ -96,18 +98,18 @@
     data() {
       return {
         daysEarly: [
-          { day: "Montag", lid: [1, 2, 3, 4], time: "8:00 - 9:45" },
-          { day: "Dienstag", lid: [9, 2, 1, 4], time: "8:00 - 9:45" },
-          { day: "Mittwoch", lid: [9, 11, 12, 13], time: "8:00 - 9:45" },
-          { day: "Donnerstag", lid: [11, 18, 16, 20], time: "8:00 - 9:45" },
-          { day: "Freitag", lid: [18, 3, 20, 7], time: "8:00 - 9:45" },
+          { day: "Montag", lid: [1, 2, 3, 4], time: "8:00 - 9:40" },
+          { day: "Dienstag", lid: [9, 2, 1, 4], time: "8:00 - 9:40" },
+          { day: "Mittwoch", lid: [9, 11, 12, 13], time: "8:00 - 9:40" },
+          { day: "Donnerstag", lid: [11, 18, 16, 20], time: "8:00 - 9:40" },
+          { day: "Freitag", lid: [18, 3, 20, 7], time: "8:00 - 9:40" },
         ],
         daysLate: [
-          { day: "Montag", lid: [5, 6, 7, 8], time: "10:00 - 11:45" },
-          { day: "Dienstag", lid: [5, 6, 10, 8], time: "10:00 - 11:45" },
-          { day: "Mittwoch", lid: [14, 15, 16, 17], time: "10:00 - 11:45" },
-          { day: "Donnerstag", lid: [19, 14, 12, 15], time: "10:00 - 11:45" },
-          { day: "Freitag", lid: [19, 13, 10, 17], time: "10:00 - 11:45" },
+          { day: "Montag", lid: [5, 6, 7, 8], time: "9:50 - 11:30" },
+          { day: "Dienstag", lid: [5, 6, 10, 8], time: "9:50 - 11:30" },
+          { day: "Mittwoch", lid: [14, 15, 16, 17], time: "9:50 - 11:30" },
+          { day: "Donnerstag", lid: [19, 14, 12, 15], time: "9:50 - 11:30" },
+          { day: "Freitag", lid: [19, 13, 10, 17], time: "9:50 - 11:30" },
         ],
         lessons: [
           {
