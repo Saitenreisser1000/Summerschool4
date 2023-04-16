@@ -20,9 +20,9 @@
           <h3>Angaben KursteilnehmerIn</h3>
           <v-text-field
             v-model="nameKT.value.value"
-            :counter="2"
             :error-messages="nameKT.errorMessage.value"
             label="Name KursteilnehmerIn"
+            required
           ></v-text-field>
 
           <v-text-field
@@ -30,6 +30,7 @@
             :counter="2"
             :error-messages="bDate.errorMessage.value"
             label="Geburtsdatum"
+            required
           ></v-text-field>
 
           <v-text-field
@@ -37,6 +38,7 @@
             :counter="2"
             :error-messages="plzOrtKT.errorMessage.value"
             label="PLZ und Ort - Kursteilnehmer"
+            required
           ></v-text-field>
 
           <v-text-field
@@ -44,6 +46,7 @@
             :counter="2"
             :error-messages="streetHnKT.errorMessage.value"
             label="Straße, Hausnr. Kursteilehmer"
+            required
           ></v-text-field>
 
           <v-text-field
@@ -51,6 +54,7 @@
             :counter="2"
             :error-messages="sVNr.errorMessage.value"
             label="SV-Nummer"
+            required
           ></v-text-field>
 
           <v-text-field
@@ -58,6 +62,7 @@
             :counter="2"
             :error-messages="citicenship.errorMessage.value"
             label="Staatsbürgerschaft"
+            required
           ></v-text-field>
 
           <v-text-field
@@ -65,6 +70,7 @@
             :counter="2"
             :error-messages="schoolKT.errorMessage.value"
             label="Schule aktuell"
+            required
           ></v-text-field>
           <br>  
           <br>
@@ -82,6 +88,7 @@
             :counter="2"
             :error-messages="nameParent.errorMessage.value"
             label="Name Erziehungsberechtigter"
+            required
           ></v-text-field>
   
           <v-text-field
@@ -89,6 +96,7 @@
             :counter="2"
             :error-messages="plzOrtParent.errorMessage.value"
             label="PLZ und Ort - Erziehungsberechtigter"
+            required
           ></v-text-field>
 
           <v-text-field
@@ -96,6 +104,7 @@
             :counter="2"
             :error-messages="streetHnParent.errorMessage.value"
             label="Straße, Hausnummer"
+            required
           ></v-text-field>
 
           <v-text-field
@@ -103,13 +112,16 @@
             :counter="2"
             :error-messages="phone.errorMessage.value"
             label="Telefonnummer"
+            required
           ></v-text-field>
   
           <v-text-field
             v-model="email.value.value"
             :error-messages="email.errorMessage.value"
             label="E-mail"
+            required
           ></v-text-field>
+          <v-checkbox v-model="aufsicht.value.value" style="margin-left: 85px;">Für die angemeldeten Tage benötigen wir Vormittagsaufsicht:</v-checkbox>
           <br>
           <v-btn class="me-4" type="submit"> Anmeldeformular Laden </v-btn>
   
@@ -139,9 +151,9 @@
         validationSchema: {
           //KT = Kursteilnehmer
           nameKT(value) {
-            if (value?.length >= 2) return true;
+            if (value?.length >= 1) return true;
   
-            //return "Name needs to be at least 2 characters.";
+            return "Name KursteilnehmerIn bitte ausfüllen.";
           },
           bDate(value){
             if (value?.length > 9 && /[0-9-]+/.test(value)) return true;
@@ -207,6 +219,9 @@
   
             return "Must be a valid e-mail.";
           },
+          aufsicht(value){
+            return true;
+          }
         },
       });
       const nameKT = useField("nameKT");
@@ -222,12 +237,13 @@
       const streetHnParent = useField("Straße, Hausnummer");
       const phone = useField("phone");
       const email = useField("email");
-  
+      const aufsicht = useField("aufsicht")
+
       const submit = handleSubmit((values) => {
         alert(JSON.stringify(values, null, 2));
       });
   
-      return { nameKT, bDate, plzOrtKT, streetHnKT, phone, email, sVNr, citicenship, schoolKT, title, nameParent, plzOrtParent, streetHnParent, submit, handleReset };
+      return { nameKT, bDate, plzOrtKT, streetHnKT, phone, email, sVNr, citicenship, schoolKT, title, nameParent, plzOrtParent, streetHnParent, aufsicht, submit, handleReset };
     },
 
     methods:{
@@ -247,6 +263,7 @@
         this.AnmeldedatenParent.plzOrtParent = this.plzOrtParent.value.value;
         this.AnmeldedatenParent.phone = this.phone.value.value;
         this.AnmeldedatenParent.email = this.email.value.value;
+        this.AnmeldedatenKT.aufsicht = this.aufsicht.value.value;
         this.getPDF();
       },
       getPDF() {
@@ -272,6 +289,7 @@
         doc.text(`Plz, Ort: ${this.AnmeldedatenParent.plzOrtParent}`, 15, 178);
         doc.text(`Telefonnummer: ${this.AnmeldedatenParent.phone}`, 15, 184);
         doc.text(`Email-Adresse: ${this.AnmeldedatenParent.email}`, 15, 190);
+        doc.text(`mein Kind benötigt Aufsicht für die rest. Zeit des Vormittags: ${this.AnmeldedatenKT.aufsicht ? "ja" : "nein"}`, 15, 200);
         
         doc.setFontSize(10);
         doc.text("Ich stimme der Verarbeitung meiner angegebenen Daten und jener meines Kindes zum Zweck der Anmeldung zur", 15,210);
