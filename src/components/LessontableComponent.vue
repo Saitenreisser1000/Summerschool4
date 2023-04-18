@@ -8,7 +8,7 @@
           <br />
           <hr />
           <br />
-          <v-btn><router-link class="routerlink" to="/">Zur Kursübersicht</router-link></v-btn>
+          <v-btn><router-link style="color: #ff7300;" class="routerlink" to="/">Zur Kursübersicht</router-link></v-btn>
           <br />
           <v-table style="margin-top: 25px;" width="500px">
             <thead>
@@ -66,7 +66,7 @@
           <br />
             <v-container style="display:flex; justify-content: center;" >
               <v-btn :class="btnToPDF" style="margin-top: 10px; margin-botton: 10px; width: 400px; font-size: 0.8rem; color:blue"
-              :disabled="isValid()"><router-link :to="`/form/${this.getActiveLessonsJSON()}`">Zum Anmeldeformular (mind. 2 Kurse auswählen)</router-link></v-btn>
+              :disabled="isValid()"><router-link style="color:#ff7300" :to="`/form/${this.getActiveLessonsJSON()}`">Zum Anmeldeformular (mind. 2 Kurse auswählen)</router-link></v-btn>
             </v-container>
             <br>
             <p style="text-align: center;">
@@ -75,7 +75,7 @@
             </p>
             <br>
             <v-container style="display:flex; justify-content: center; " >
-              <v-card style="width: 600px">
+              <v-card style="width: 600px; background-color: #f2f2f2;">
                 <v-list>
                   <v-list-subheader>gewählte Kurse:</v-list-subheader>
                   <v-list-item
@@ -180,7 +180,7 @@
           {
             lessonid: 8,
             ldays: [],
-            lessonname: "Percussion",
+            lessonname: "Bodypercussion",
             active: false,
             btncolor: "#83aef2",
             ltime: [],

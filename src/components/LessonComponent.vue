@@ -7,9 +7,9 @@
       <br />
       <hr />
       <br />
-      <v-btn><router-link class="routerlink" to="/lessontable">Zur Anmeldung</router-link></v-btn>
+      <v-btn><router-link style="color: #ff7300;" class="routerlink" to="/lessontable">Zur Anmeldung</router-link></v-btn>
       <br />
-      <v-card style="margin-top: 25px;" v-for="(lesson, i) in lessons" :key="i" >
+      <v-card style="margin-top: 25px; background-color:#f2f2f2;" v-for="(lesson, i) in lessons" :key="i" >
         <v-row no-gutters>
           <v-col cols="2">
             <v-img
@@ -87,14 +87,14 @@
               "Entdecke die Welt der Fotografie und experimentiere mit einem alten Druckverfahren - der Cyanotypie! Verbessere deine fotografischen Fähigkeiten und lerne, wie man die Bilder in einem einzigartigen blauen Farbton entwickelt.",
           },
           { title: "Bewegtes Leben, bewegtes Lernen ", tutor: "Stefan Dollhäubl-Lehmann ", pic: "/pics/Bewegtes Leben, bewegtes Lernen.jpg", text: "Ausgehend von Balance und Ausrichtung im Gegensatz zu einer Position, wird bewusstes Denken und Entscheiden in Bewegung vorgestellt und ausprobiert. Und was passiert im Körper, wenn wir uns bewegen – ein kurzer Theorieteil soll den auf Praxis ausgerichteten Kurs abrunden." },
-          { title: "Schach", tutor: "Philipp Türkis", pic: "/pics/Schach.jpg", text: "" },
+          { title: "Schach", tutor: "Philipp Türkis", pic: "/pics/Schach.jpg", text: "Das “Spiel der Könige” fördert strategisches Geschick und logisches Denken. Neben der Besprechung der Grundlagen, Regeln und einigen Tricks und Hilfestellungen wird auch Zeit für Schachspiele im Kurs sein." },
           { title: "Spanisch", tutor: "Ivana Glavas", pic: "/pics/Spanisch.png", text: "¡Hablamos español! Tauche ein in die spanischsprachige Welt – nicht nur sprachlich, sondern auch kulturell – und gewinne neue Eindrücke von Spanien und Lateinamerika. ¡Vamos!  " },
-          { title: "Chirurgisches Nähen", tutor: "Ursula Jahn", pic: "/pics/Chirurgisches Nähen.jpg", text: "Größere Verletzungen der Haut verheilen schneller, wenn zusammengehörige Wundschichten spannungsfrei aneinander liegen. Hierbei kommt das chirurgische Nähen zum Einsatz, um die Wundheilung zu begünstigen. In diesem Kurs beschäftigen wir uns näher mit dem Aufbau der Haut und probieren verschiedene Naht- und Knotentechniken für einen erfolgreichen Wundverschluss aus." },
+          { title: "Chirurgisches Nähen", tutor: "Ursula Jahn", pic: "/pics/Chirurgisches Nähen.png", text: "Größere Verletzungen der Haut verheilen schneller, wenn zusammengehörige Wundschichten spannungsfrei aneinander liegen. Hierbei kommt das chirurgische Nähen zum Einsatz, um die Wundheilung zu begünstigen. In diesem Kurs beschäftigen wir uns näher mit dem Aufbau der Haut und probieren verschiedene Naht- und Knotentechniken für einen erfolgreichen Wundverschluss aus." },
           { title: "Philosophie", tutor: "Tina Schmid-Ratzenböck", pic: "/pics/Sofies-Welt.png", text: "Mit Textauszügen aus dem Buch “Sophies Welt” von Jostein Gaarder werden wir uns spannende Einblicke in verschiedene Gebiete der Philosophie erarbeiten. Ziel ist, dass schon Jugendliche Interesse an philosophischen Themen entwickeln und die Philosophie nicht als abgehobenes, abstraktes Fach sehen. " },
           { title: "Englisch", tutor: "Sandra Kiendler", pic: "/pics/Gaming_English.jpg", text: "Game on! – oder doch Game Over? Bist du der Protagonist deines Spiels oder bloß NPC? Lerne das faszinierende Universum des Gamings kennen und die Sprache, die du brauchst, um dich in der komplexen Welt der Spiele – online und offline – zurechtzufinden." },
           { title: "Spieleprogrammierung", tutor: "Stefan Leutgeb", pic: "/pics/gamerzone.jpg", text: "Du interessierst dich für Computerspiele und hast dich schon gefragt, wie man diese selbst erstellen kann? Dann bist du hier genau richtig! Wir werden in diesem Kurs kleine Spiele mit der Programmierumgebung Scratch entwickeln." },
-          { title: "Chor", tutor: "Stefan Kapeller", text: "" },
-          { title: "Percussion", tutor: "Stefan Kapeller", text: "" },
+          { title: "Chor", tutor: "Stefan Kapeller", pic: "/pics/Chor.png", text: "Be part of the sound – du singst gerne und hast schon musikalische Erfahrung gesammelt? Dann bist du beim Jugendchor genau richtig. Wir singen alles, was uns Spaß macht, einstimmig & mehrstimmig, mit & ohne Klavier, von Abba bis Zappa. Mindestteilnehmerzahl: 8" },
+          { title: "Bodypercussion", tutor: "Stefan Kapeller", pic: "/pics/Klatschen.jpg", text: "Feel the Rhythm - das Erzeugen von Klängen und Rhythmen mit dem ganzen Körper steht im Mittelpunkt. Schritt für Schritt beschäftigen wir uns mit Körper-Klängen und Spieltechniken, um Popsongs zu untermalen oder eigene attraktive Bodypercussion-Choreographien zu entwerfen. Zusätzlich gibt es wertvolle Tipps, wie wir unsere rhythmischen Fähigkeiten verbessern können. Mindestteilnehmerzahl: 8" },
           { title: "Gesang", tutor: "Alexandra Diesterhöft", pic: "/pics/singen.jpg", text: "Singen macht Spaß, singen tut gut! Gemeinsam begeben wir uns auf eine musikalische Reise des Ensemblegesangs und entdecken die Vielfältigkeit Deiner Stimme." },
           { title: "Tontechnik", tutor: "Paul Katzmayr", text: "" },
           { title: "Biologie", tutor: "Marlene Kneidinger", pic: "/pics/Biologie_Kneidinger1.jpg", text: "Sezierworkshop: Herz, Lunge & Co. Du hast dich schon immer für den konkreten Aufbau von Organen und die Präparation dieser interessiert? Dann bist du in diesem Kurs genau richtig! Wir werden gemeinsam Herz, Lunge und Niere eines Schweins sezieren und den Aufbau dieser Organe genau unter die Lupe nehmen. Max. 12 TeilnehmerInnen  " },

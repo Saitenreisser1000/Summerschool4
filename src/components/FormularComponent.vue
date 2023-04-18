@@ -8,7 +8,7 @@
         max-width: 1200px;
         "
     >
-      <v-card width="80%">
+      <v-card width="80%" style="background-color:#f2f2f2">
         <h1 style="text-align: center;">Sommerschule - Gymnasium Bad Leonfelden</h1>
         <h2 style="text-align: center;">4. - 8. September 2023</h2>
         <br>
@@ -17,7 +17,7 @@
         <hr>
         <br>
         <form @submit.prevent="submit">
-          <h3>Angaben KursteilnehmerIn</h3>
+          <h3 style="margin-left: 15px;">Angaben KursteilnehmerIn</h3>
           <v-text-field
             v-model="nameKT.value.value"
             :error-messages="nameKT.errorMessage.value"
@@ -74,7 +74,7 @@
           ></v-text-field>
           <br>  
           <br>
-          <h3>Angaben Erziehungsberechtigte(r)</h3>
+          <h3 style="margin-left: 15px;">Angaben Erziehungsberechtigte(r)</h3>
 
           <v-text-field
             v-model="title.value.value"
@@ -121,7 +121,7 @@
             label="E-mail"
             required
           ></v-text-field>
-          <v-checkbox v-model="aufsicht.value.value" style="margin-left: 85px;">Für die angemeldeten Tage benötigen wir Vormittagsaufsicht:</v-checkbox>
+          <v-checkbox v-model="aufsicht.value.value" label="Für die angemeldeten Tage wird um für die restl. Zeit um Vormittagsaufsicht ersucht (8:00 - 11:30)" style="margin-left: 85px;"></v-checkbox>
           <br>
           <v-btn class="me-4" type="submit"> Anmeldeformular Laden </v-btn>
   
@@ -291,10 +291,10 @@
         doc.text(`Email-Adresse: ${this.AnmeldedatenParent.email}`, 15, 190);
         doc.text(`mein Kind benötigt Aufsicht für die rest. Zeit des Vormittags: ${this.AnmeldedatenKT.aufsicht ? "ja" : "nein"}`, 15, 200);
         
-        doc.setFontSize(10);
-        doc.text("Ich stimme der Verarbeitung meiner angegebenen Daten und jener meines Kindes zum Zweck der Anmeldung zur", 15,210);
-        doc.text("Sommerschule 2023 im BMBWF, im BKA, in der zuständigen Bildungsdirektion, im zuständigen Finanzamt sowie in", 15, 215);
-        doc.text("den teilnehmenden Schulstandorten gemäß der schulrechtlichen Rechtsgrundlagen zu.", 15, 220)
+        doc.setFontSize(7);
+        doc.text("Ich stimme der Verarbeitung meiner angegebenen Daten und jener meines Kindes zum Zweck der Anmeldung zur Sommerschule 2023 im BMBWF, im BKA,", 15,220);
+        doc.text("in der zuständigen Bildungsdirektion, im zuständigen Finanzamt sowie in den teilnehmenden Schulstandorten gemäß der schulrechtlichen Rechtsgrundlagen zu.", 15, 225);
+      
   
         doc.setFontSize(15);
         doc.text("Gewählte Kurse:", 15, 105);
