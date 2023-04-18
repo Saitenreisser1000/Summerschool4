@@ -121,7 +121,7 @@
             label="E-mail"
             required
           ></v-text-field>
-          <v-checkbox v-model="aufsicht.value.value" label="Für die angemeldeten Tage wird um für die restl. Zeit um Vormittagsaufsicht ersucht (8:00 - 11:30)" style="margin-left: 85px;"></v-checkbox>
+          <v-checkbox v-model="aufsicht.value.value" label="Für die angemeldeten Tage wird für die restl. Zeit um Vormittagsaufsicht ersucht (8:00 - 11:30)" style="margin-left: 85px;"></v-checkbox>
           <br>
           <v-btn class="me-4" type="submit"> Anmeldeformular Laden </v-btn>
   
