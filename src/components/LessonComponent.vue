@@ -40,49 +40,49 @@
           {
             title: "Weltreise (GW)",
             tutor: "Theresa Weissenböck",
-            pic: "/pics/Weltreise.jpg",
+            pic: "/pics2/Weltreise.jpg",
             text:
               "Eine Weltreise mit allen Sinnen Wir erkunden unterschiedliche Länder der Welt und lernen die Kultur, die Kulinarik, die Gewohnheiten der Menschen, die Musik und die Landschaft der einzelnen Staaten näher kennen.",
           },
           {
             title: "3D-Modelling",
             tutor: "Wolfgang Hoffelner",
-            pic: "/pics/3D-Modeling.jpg",
+            pic: "/pics2/3D-Modeling.jpg",
             text:
               "Wir lernen das 3D-Animationsprogramm “Blender” kennen und ergründen, wie in Filmen und Computerspielen Charaktere und ganze Welten entstehen.",
           },
           {
             title: "Filzen",
             tutor: "Katharina Hoffelner",
-            pic: "/pics/Filzkurs.jpg",
+            pic: "/pics2/Filzkurs.jpg",
             text:
               "Wir gestalten mittels der flächenbildenden Technik “Filzen” aus Schafwolle eine Handy- oder Tablet Hülle sowie andere kleine gefilzte Gegenstände nach Wunsch (Unkostenbeitrag 20€/Person)Max. 12 TeilnehmerInnenMitzubringen: 1 altes Handtuch",
           },
           {
             title: "Keramik",
             tutor: "Katharina Hoffelner",
-            pic: "/pics/Keramikkurs.jpg",
+            pic: "/pics2/Keramikkurs.jpg",
             text:
               "Wir lernen einige keramische Aufbaumethoden kennen und gestalten ein fantastisches Tierwesen mit dem Werkstoff Ton. (Unkostenbeitrag 10€/ Person)Max. 12 TeilnehmerInnen",
           },
           {
             title: "Italienisch",
             tutor: "Isabella Biebl",
-            pic: "/pics/Italienisch.jpeg",
+            pic: "/pics2/Italienisch.jpg",
             text:
               "Ciao ragazzi! Du möchtest mehr als Pizza, Pasta und Ciao verstehen? Dann tauche ein in die italienische Sprache und lerne spielerisch erste Basics des Italienischen kennen. Ci vediamo! ",
           },
           {
             title: "Französisch",
             tutor: "Isabella Biebl",
-            pic: "/pics/Französisch.jpeg",
+            pic: "/pics2/Französisch.jpg",
             text:
               "Möchtest du gerne wissen, wie Französisch wirklich ist? Dann lass uns gemeinsam erste Eindrücke der französischen Sprache sammeln! Auf spielerische Weise geht’s in die Heimat von Baguette, Croissant und Eiffelturm! ",
           },
           {
             title: "Foto/Cyanotypie",
             tutor: "Anna Strasser",
-            pic: "/pics/Foto-Cyanotypie.jpg",
+            pic: "/pics2/Foto-Cyanotypie.jpg",
             text:
               "Entdecke die Welt der Fotografie und experimentiere mit einem alten Druckverfahren - der Cyanotypie! Verbessere deine fotografischen Fähigkeiten und lerne, wie man die Bilder in einem einzigartigen blauen Farbton entwickelt.",
           },
