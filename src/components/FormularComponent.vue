@@ -283,13 +283,14 @@ export default {
       doc.text(`Staatsbürgerschaft: ${this.AnmeldedatenKT.citicenship}`, 15, 80);
       doc.text(`Aktuelle Schule: ${this.AnmeldedatenKT.schoolKT}`, 15, 86);
       //Parents
-      doc.text(`Titel: ${this.AnmeldedatenParent.title}`, 15, 160);
-      doc.text(`Name: ${this.AnmeldedatenParent.nameParent}`, 15, 166);
-      doc.text(`Straße, Hausnummer: ${this.AnmeldedatenParent.streetHnParent}`, 15, 172);
-      doc.text(`Plz, Ort: ${this.AnmeldedatenParent.plzOrtParent}`, 15, 178);
-      doc.text(`Telefonnummer: ${this.AnmeldedatenParent.phone}`, 15, 184);
-      doc.text(`Email-Adresse: ${this.AnmeldedatenParent.email}`, 15, 190);
-      doc.text(`mein Kind benötigt Aufsicht für die kursfreie Zeit des Vormittags: ${this.AnmeldedatenKT.aufsicht ? "ja" : "nein"}`, 15, 200);
+      doc.text('Erziehungsberechtigte(r):',15,170);
+      doc.text(`Titel: ${this.AnmeldedatenParent.title}`, 15, 180);
+      doc.text(`Name: ${this.AnmeldedatenParent.nameParent}`, 15, 186);
+      doc.text(`Straße, Hausnummer: ${this.AnmeldedatenParent.streetHnParent}`, 15, 192);
+      doc.text(`Plz, Ort: ${this.AnmeldedatenParent.plzOrtParent}`, 15, 198);
+      doc.text(`Telefonnummer: ${this.AnmeldedatenParent.phone}`, 15, 204);
+      doc.text(`Email-Adresse: ${this.AnmeldedatenParent.email}`, 15, 210);
+      doc.text(`mein Kind benötigt Aufsicht für die kursfreie Zeit der jeweiligen Vormittage: ${this.AnmeldedatenKT.aufsicht ? "ja" : "nein"}`, 15, 220);
       
       
 
@@ -318,10 +319,18 @@ export default {
       doc.setFontSize(10);
 
       doc.text("Motivationsschreiben zur Kurswahl:", 15, 40);
-
+//tf
+      doc.rect(15, 45, 175, 150);
+      /*doc.textInput(15, 45, {
+          name: "Motivationsschreiben",
+          value: "",
+          width: 80,
+          height: 20
+      });*/
+//tf
       doc.setFontSize(7);
-      doc.text("Ich stimme der Verarbeitung meiner angegebenen Daten und jener meines Kindes zum Zweck der Anmeldung zur Sommerschule 2023 im BMBWF, im BKA,", 15,200);
-      doc.text("in der zuständigen Bildungsdirektion, im zuständigen Finanzamt sowie in den teilnehmenden Schulstandorten gemäß der schulrechtlichen Rechtsgrundlagen zu.", 15, 205);
+      doc.text("Ich stimme der Verarbeitung meiner angegebenen Daten und jener meines Kindes zum Zweck der Anmeldung zur Sommerschule 2023 im BMBWF, im BKA,", 15,210);
+      doc.text("in der zuständigen Bildungsdirektion, im zuständigen Finanzamt sowie in den teilnehmenden Schulstandorten gemäß der schulrechtlichen Rechtsgrundlagen zu.", 15, 215);
 
       doc.setFontSize(12);
       doc.text("Unterschrift Erziehungsberechtigte(r):", 15, 240);
