@@ -238,7 +238,7 @@
             active: false,
             btncolor: "#7f8a7f",
             ltime: [],
-            tutor: "Tina Schmid-Ratzenböck"
+            tutor: "Renate Leeb"
           },
           {
             lessonid: 15,
