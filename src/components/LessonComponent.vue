@@ -1,6 +1,6 @@
 <template>
     <v-container style="max-width: 1200px;">
-      <h1 style="text-align: center;">Lebe deine Talente</h1>
+      <h1 style="text-align: center;">Lebe deine Talente!</h1>
       <h2 style="text-align: center;">4. - 8. September 2023</h2>
       <br>
       <h2 style="text-align: center;">Kursangebot</h2>
