@@ -225,7 +225,7 @@
           {
             lessonid: 13,
             ldays: [],
-            lessonname: "Biologie",
+            lessonname: "Sezieren",
             active: false,
             btncolor: "#2bba23",
             ltime: [],
@@ -288,7 +288,7 @@
           {
             lessonid: 20,
             ldays: [],
-            lessonname: "3D Modelling",
+            lessonname: "3D Modeling",
             active: false,
             btncolor: "#a1894c",
             ltime: [],

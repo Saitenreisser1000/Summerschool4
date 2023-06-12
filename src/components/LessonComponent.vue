@@ -45,7 +45,7 @@
               "Eine Weltreise mit allen Sinnen! Wir erkunden unterschiedliche Länder der Welt und lernen die Kultur, die Kulinarik, die Gewohnheiten der Menschen, die Musik und die Landschaft der einzelnen Staaten näher kennen.",
           },
           {
-            title: "3D-Modelling",
+            title: "3D-Modeling",
             tutor: "Wolfgang Hoffelner",
             pic: "/pics2/3D-Modeling.jpg",
             text:
@@ -97,7 +97,7 @@
           { title: "Bodypercussion", tutor: "Stefan Kapeller", pic: "/pics2/Klatschen.jpg", text: "Feel the rhythm - das Erzeugen von Klängen und Rhythmen mit dem ganzen Körper steht im Mittelpunkt. Schritt für Schritt beschäftigen wir uns mit Körper-Klängen und Spieltechniken, um Popsongs zu untermalen oder eigene attraktive Bodypercussion-Choreographien zu entwerfen. Zusätzlich gibt es wertvolle Tipps, wie wir unsere rhythmischen Fähigkeiten verbessern können. Mindestteilnehmerzahl: 8" },
           { title: "Gesang", tutor: "Alexandra Diesterhöft", pic: "/pics2/singen.jpg", text: "Singen macht Spaß, singen tut gut! Gemeinsam begeben wir uns auf eine musikalische Reise des Ensemblegesangs und entdecken die Vielfältigkeit deiner Stimme." },
           { title: "Tontechnik", tutor: "Paul Katzmayr", pic: "/pics2/Tontechnik.jpg", text: "Die moderne Tontechnik ist vielfältig und vor allem für Musiker:Innen unumgänglich! Egal ob der richtige Schnitt von Audiofiles oder das Aufbauen einer PA-Anlage. In diesem Kurs geben wir einen kleinen Einblick in diese spannende Materie." },
-          { title: "Biologie", tutor: "Marlene Kneidinger", pic: "/pics2/Biologie_Kneidinger1.jpg", text: "Sezierworkshop: Herz, Lunge & Co. Du hast dich schon immer für den konkreten Aufbau von Organen und die Präparation dieser interessiert? Dann bist du in diesem Kurs genau richtig! Wir werden gemeinsam Herz, Lunge und Niere eines Schweins sezieren und den Aufbau dieser Organe genau unter die Lupe nehmen. Max. 12 TeilnehmerInnen  " },
+          { title: "Sezieren", tutor: "Marlene Kneidinger", pic: "/pics2/Biologie_Kneidinger1.jpg", text: "Sezierworkshop: Herz, Lunge & Co. Du hast dich schon immer für den konkreten Aufbau von Organen und die Präparation dieser interessiert? Dann bist du in diesem Kurs genau richtig! Wir werden gemeinsam Herz, Lunge und Niere eines Schweins sezieren und den Aufbau dieser Organe genau unter die Lupe nehmen. Max. 12 TeilnehmerInnen  " },
           { title: "flex-Based Learning in Chemie © School of Creative Solutions	", tutor: "Karin Juza", pic: "/pics2/Foto Sommerschule Chemie.jpg", text: "Du denkst, dass Kreativität nur in der Kunst gefragt ist? Lass dich vom Gegenteil überzeugen und lerne in diesem Workshop alltägliche Probleme und chemische Aufgaben mit Fantasie und Witz zu lösen. In deinem Team werden vielfältige Lösungswege entwickelt und danach im Labor auf ihre Machbarkeit untersucht. Mindestteilnehmeranzahl: 10 " },
         ],
       };
